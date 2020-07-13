@@ -1,0 +1,46 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# More to ignore:
+# Source: https://github.com/palori/ex_videos/blob/master/.gitignore
+#         https://stackoverflow.com/questions/31543997/make-git-ignore-dll-pdb-and-similar-generate-files
+
+# bin and obj folders
+*/[Bb]in/
+*/[Oo]bj/
+*.pdb
+*.cache
+
+# Visua Studio
+.vs
+.vscode
