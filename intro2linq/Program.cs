@@ -14,6 +14,7 @@ namespace intro2linq
             fase1(numbers);
             fase2(numbers);
             fase3(numbers);
+            fase3_lambda(numbers);
             fase4(names);
         }
 
@@ -87,6 +88,38 @@ namespace intro2linq
             {
                 Console.Write($" {num}");
             }
+        }
+
+        public static void fase3_lambda(int[] numbers)
+        {
+            title("fase3: lambda");
+
+            // Lambda:
+            // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions
+            // Can be used with LINQ
+
+            var numQuery1 = numbers.Where(x => x>=5);
+            var numQuery2 = numbers.Where(x => x<5);
+
+            Console.Write("Grades >= 5: ");
+            foreach (int num in numQuery1)
+            {
+                Console.Write($" {num}");
+            }
+
+            Console.Write("\nGrades < 5: ");
+            foreach (int num in numQuery2)
+            {
+                Console.Write($" {num}");
+            }
+
+            Console.WriteLine("Other variations:");
+            var numQuery3 = numbers.Where(x => x>=5);
+            Console.WriteLine($"Grades >= 5: {string.Join(", ", numQuery3)}");
+            var numQuery4 = numbers.Select(x => x<5);
+            Console.WriteLine($"Grades < 5: {string.Join(", ", numQuery4)}");
+            var numQuery5 = numbers.TakeWhile(x => x<9);
+            Console.WriteLine($"Grades < 9: {string.Join(", ", numQuery5)}");
         }
 
         public static void fase4(string[] names)
